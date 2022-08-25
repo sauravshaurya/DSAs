@@ -1,3 +1,5 @@
+package Tree;
+
 public class BinarySearchTree {
 
     static class Node {
