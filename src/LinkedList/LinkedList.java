@@ -1,7 +1,7 @@
 package LinkedList;
 
 
-public class LinkedList extends Node{
+public class LinkedList extends Node {
 
     Node head;
 
@@ -15,7 +15,7 @@ public class LinkedList extends Node{
     }
 
     void removeFirstNode() {
-        if(head == null) {
+        if (head == null) {
             return;
         }
         Node temp = head;
@@ -24,25 +24,25 @@ public class LinkedList extends Node{
 
     void printList() {
         Node temp = head;
-        while(temp != null) {
+        while (temp != null) {
             System.out.println(temp.data + " ");
             temp = temp.next;
         }
     }
 
-     Node removeNode(Node head, int pos) {
+    Node removeNode(Node head, int pos) {
         Node temp = head;
 
-        if(pos == 1) {
+        if (pos == 1) {
             head = temp.next;
             return head;
         }
 
-        for(int i=1; temp != null & i<pos-1;i++) {
+        for (int i = 1; temp != null & i < pos - 1; i++) {
             temp = temp.next;
         }
 
-        if(temp == null || temp.next == null) {
+        if (temp == null || temp.next == null) {
             return head;
         }
 
@@ -54,14 +54,14 @@ public class LinkedList extends Node{
     Node removeNodeTwo(Node head, int pos) {
         Node temp = head;
 
-        if(pos == 1) {
+        if (pos == 1) {
             head = temp.next;
             return head;
         }
 
         int count = 1;
 
-        while(count < pos-1) {
+        while (count < pos - 1) {
             temp = temp.next;
             count++;
         }
